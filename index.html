@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Viaje al Centro de la Célula!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🔬 ¡Viaje al Centro de la Célula!</h1>
+        <p>Descubriendo los ladrillos mágicos de la vida.</p>
+    </header>
+
+    <main>
+        <section class="card intro">
+            <h2>🧐 ¿Qué es la Célula?</h2>
+            <p>Imagina que tu cuerpo es un gran castillo de legos. Si miras muy, muy de cerca, verás que está construido por millones de piececitas pequeñas. ¡Esas piececitas son las <strong>células</strong>!</p>
+            <p>La célula es la parte más pequeña de todos los seres vivos. ¡Tú, tu perro, las plantas y hasta los insectos están hechos de células!</p>
+        </section>
+
+        <section class="card parts">
+            <h2>🏭 Las 3 Partes Principales</h2>
+            <p>Para entender cómo funciona una célula, vamos a imaginar que es una <strong>gran fábrica</strong>.</p>
+            
+            <div class="part-grid">
+                <div class="part-item membrane">
+                    <h3>🛡️ La Membrana Celular</h3>
+                    <p><strong>Los Guardias de Seguridad</strong></p>
+                    <p>Es la capa exterior. Protege a la fábrica y decide qué cosas buenas pueden entrar y qué cosas malas deben salir.</p>
+                </div>
+                <div class="part-item cytoplasm">
+                    <h3>🧪 El Citoplasma</h3>
+                    <p><strong>El Espacio de Trabajo</strong></p>
+                    <p>Es un líquido parecido a la gelatina. Mantiene todo en su lugar para que las máquinas de la fábrica puedan hacer su trabajo sin chocar.</p>
+                </div>
+                <div class="part-item nucleus">
+                    <h3>🧠 El Núcleo</h3>
+                    <p><strong>El Jefe / El Cerebro</strong></p>
+                    <p>Es el centro de control. Dirige toda la fábrica y guarda el manual de instrucciones secreto (ADN).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card quiz">
+            <h2>✏️ ¡Ponte a prueba! (Misión Secreta)</h2>
+            <p>Lee la misión y selecciona la parte correcta de la célula:</p>
+
+            <div class="question" id="q1">
+                <p><strong>1. "Soy el jefe, yo doy las órdenes y guardo la información."</strong></p>
+                <div class="options">
+                    <button onclick="checkAnswer('q1', 'Citoplasma')">Citoplasma</button>
+                    <button onclick="checkAnswer('q1', 'Núcleo')">El Núcleo</button>
+                    <button onclick="checkAnswer('q1', 'Membrana')">La Membrana</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="question" id="q2">
+                <p><strong>2. "Soy la puerta, yo decido quién entra y quién sale."</strong></p>
+                <div class="options">
+                    <button onclick="checkAnswer('q2', 'Membrana')">La Membrana</button>
+                    <button onclick="checkAnswer('q2', 'Núcleo')">El Núcleo</button>
+                    <button onclick="checkAnswer('q2', 'Citoplasma')">El Citoplasma</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="question" id="q3">
+                <p><strong>3. "Soy la gelatina donde todas las partes flotan."</strong></p>
+                <div class="options">
+                    <button onclick="checkAnswer('q3', 'Núcleo')">El Núcleo</button>
+                    <button onclick="checkAnswer('q3', 'Citoplasma')">El Citoplasma</button>
+                    <button onclick="checkAnswer('q3', 'Membrana')">La Membrana</button>
+                </div>
+                <p class="feedback"></p>
+            </div>
+            
+            <div id="success-message" class="hidden">
+                <h2>🎉 ¡Felicidades Explorador! Misión Cumplida 🎉</h2>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
