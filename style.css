@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    border: 2px solid #e1e8ed;
+}
+
+.card h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #4a4e69;
+    margin-top: 0;
+    border-bottom: 3px solid #f0f8ff;
+    padding-bottom: 0.5rem;
+}
+
+.part-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media(min-width: 600px) {
+    .part-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.part-item {
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.part-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.part-item h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+.membrane { background-color: #ffeaa7; border: 3px solid #fdcb6e; color: #d35400; }
+.cytoplasm { background-color: #81ecec; border: 3px solid #00cec9; color: #008f8c; }
+.nucleus { background-color: #a29bfe; border: 3px solid #6c5ce7; color: #4834d4; }
+
+.question {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #0984e3;
+}
+
+.options {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #0984e3;
+    background-color: white;
+    color: #0984e3;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0984e3;
+    color: white;
+    transform: scale(1.05);
+}
+
+button.correct {
+    background-color: #00b894;
+    border-color: #00b894;
+    color: white;
+}
+
+button.incorrect {
+    background-color: #d63031;
+    border-color: #d63031;
+    color: white;
+}
+
+.feedback {
+    font-weight: bold;
+    margin-top: 0.8rem;
+    min-height: 1.5em;
+}
+
+.correct-text { color: #00b894; }
+.incorrect-text { color: #d63031; }
+
+.hidden {
+    display: none;
+}
+
+#success-message {
+    text-align: center;
+    background-color: #ffeaa7;
+    padding: 2rem;
+    border-radius: 15px;
+    color: #d35400;
+    border: 3px dashed #fdcb6e;
+    animation: pop 0.5s ease-out;
+}
+
+#success-message h2 {
+    border: none;
+    margin: 0;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
